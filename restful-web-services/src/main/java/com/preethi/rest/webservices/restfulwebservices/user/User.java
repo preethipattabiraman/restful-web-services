@@ -2,11 +2,14 @@ package com.preethi.rest.webservices.restfulwebservices.user;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
 public class User {
 
+	@JsonIgnore
 	private int id;
 
 	@Size(min = 2, message = "Name should have at least 2 characters.")
